@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SwitchButton.Styles">
+
+    <Style x:Key="BaseButton" TargetType="Rectangle">
+        <Setter Property="Fill" Value="{StaticResource ButtBackground}"></Setter>
+        <Setter Property="RadiusX" Value="130"></Setter>
+        <Setter Property="RadiusY" Value="130"></Setter>
+    </Style>
+
+</ResourceDictionary>

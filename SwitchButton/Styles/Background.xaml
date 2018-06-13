@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SwitchButton.Styles">
+
+    <SolidColorBrush x:Key="MainBackground" Color="#b0dce7"></SolidColorBrush>
+    <SolidColorBrush x:Key="ButtBackground" Color="#f6a938"></SolidColorBrush>
+
+
+    <SolidColorBrush x:Key="Circle"         Color="#ffffff"></SolidColorBrush>
+    <SolidColorBrush x:Key="CircleBehind"   Color="#ec9c37"></SolidColorBrush>
+    <SolidColorBrush x:Key="CirclePressed"  Color="#fad39c"></SolidColorBrush>
+
+    <SolidColorBrush x:Key="WhiteColor"     Color="#ffffff"></SolidColorBrush>
+
+</ResourceDictionary>

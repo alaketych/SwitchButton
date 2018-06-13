@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SwitchButton.Styles">
+
+    <FontFamily x:Key="SwitchFont">Tw Cen MT Condensed Extra Bold</FontFamily>
+
+    <Style x:Key="SwitchLabel" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource SwitchFont}"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource WhiteColor}"></Setter>
+        <Setter Property="FontSize"   Value="75"></Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SwitchButton.Styles">
+
+    <Style x:Name="EllipseEffect" x:Key="EllipseEffect" TargetType="Ellipse">
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Ellipse.MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ParallelTimeline  >
+                            <ColorAnimation Storyboard.TargetProperty="Fill.Color" To="#fad39c" />
+                        </ParallelTimeline>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="Ellipse.MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ParallelTimeline  >
+                            <ColorAnimation Storyboard.TargetProperty="Fill.Color" To="#ffffff" />
+                        </ParallelTimeline>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>
