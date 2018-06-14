@@ -11,11 +11,16 @@
         WindowStyle="None" ResizeMode="NoResize"
         Background="{StaticResource MainBackground}">
     
-    <Grid Height="250" Width="650">
+    <Grid Height="260" Width="665">
         <Canvas>
-            <Rectangle x:Name="ToggleSwitch" Width="665" Height="260" Style="{StaticResource BaseButton}"          ></Rectangle>
-            <Label     x:Name="SwitchLables" Style="{StaticResource SwitchLabel}" Canvas.Left="322" Canvas.Top="88">SWITCH</Label>
-            <Ellipse   x:Name="CircleShadow" Width="260" Height="260"  Fill="{StaticResource CircleBehind}"></Ellipse>
+            <Rectangle x:Name="ToggleSwitch" Width="665" Height="260" Style="{StaticResource BaseButton}"          >
+            </Rectangle>
+            <Label     x:Name="SwitchLables"                          Style="{StaticResource SwitchLabel}" 
+                       Canvas.Left="322" Canvas.Top="88"                                                           >SWITCH</Label>
+            <Ellipse   x:Name="CircleShadow" Width="260" Height="260"  Fill="{StaticResource CircleBehind}"
+                       Opacity="0.7"
+                       MouseMove="CircleKnob_MouseMove"
+                       ></Ellipse>
             <Ellipse   x:Name="CircleKnob" Width="230" Height="230"  Style="{StaticResource EllipseEffect}"
                        Fill="{StaticResource Circle}" 
                        Canvas.Left="14" Canvas.Top="15"

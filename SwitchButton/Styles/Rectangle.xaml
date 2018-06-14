@@ -8,4 +8,10 @@
         <Setter Property="RadiusY" Value="130"></Setter>
     </Style>
 
+    <Style x:Key="StretchButton" TargetType="Rectangle">
+        <Setter Property="Fill" Value="{StaticResource CirclePressed}"></Setter>
+        <Setter Property="RadiusX" Value="130"></Setter>
+        <Setter Property="RadiusY" Value="130"></Setter>
+    </Style>
+    
 </ResourceDictionary>

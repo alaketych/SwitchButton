@@ -10,6 +10,7 @@
     <SolidColorBrush x:Key="CircleBehind"   Color="#ec9c37"></SolidColorBrush>
     <SolidColorBrush x:Key="CirclePressed"  Color="#fad39c"></SolidColorBrush>
 
+    
     <SolidColorBrush x:Key="WhiteColor"     Color="#ffffff"></SolidColorBrush>
 
 </ResourceDictionary>

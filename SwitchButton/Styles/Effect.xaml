@@ -2,7 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:SwitchButton.Styles">
 
-    <Style x:Name="EllipseEffect" x:Key="EllipseEffect" TargetType="Ellipse">
+    <!--ELLIPSE EFFECT-->
+    <Style x:Key="EllipseEffect" TargetType="Ellipse">
         <Style.Triggers>
             <EventTrigger RoutedEvent="Ellipse.MouseEnter">
                 <BeginStoryboard>
@@ -25,4 +26,28 @@
         </Style.Triggers>
     </Style>
 
+    
+    <!--RECTANGLE EFFECT-->
+    <Style x:Key="RectangleEffect" TargetType="Rectangle">
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Rectangle.MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.7" To="1" 
+                                                 Duration="0:0:2.5" BeginTime="0:0:1" AutoReverse="True" 
+                                                 RepeatBehavior="Forever"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="Ellipse.MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ParallelTimeline  >
+                            <ColorAnimation Storyboard.TargetProperty="Fill.Color" To="#ec9c37" />
+                        </ParallelTimeline>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>

@@ -22,29 +22,47 @@ namespace SwitchButton
             InitializeComponent();
         }
 
-        bool activated = false;
-        Point point;
+        bool Action = false;
+        double   InitPxls = 15;
+        double FinitePxls = 420;
+        double Movement;
+        Point Point;
 
         private void CircleKnob_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            activated = true;
-            point = Mouse.GetPosition(CircleKnob);
+            Action = true;
+            Point = Mouse.GetPosition(CircleKnob);
             Mouse.Capture(CircleKnob);
         }
 
         private void CircleKnob_MouseMove(object sender, MouseEventArgs e)
         {
-            if (activated)
+            if (Action)
             {
-                double movement = Canvas.GetLeft(CircleKnob) + Mouse.GetPosition(CircleKnob).X - point.X;
-                Canvas.SetLeft(CircleKnob, movement);
+                Movement = Canvas.GetLeft(CircleKnob) + Mouse.GetPosition(CircleKnob).X - Point.X;
+
+                if (Movement > InitPxls && Movement < FinitePxls) {
+                    Canvas.SetLeft(CircleKnob, Movement);
+                    Canvas.SetLeft(CircleShadow, Movement - 15);
+                }
             }
         }
 
         private void CircleKnob_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            activated = false;
+            Action = false;
             Mouse.Capture(null);
+
+            if (Movement < InitPxls + 210)
+            {
+                Canvas.SetLeft(CircleKnob,   InitPxls);
+                Canvas.SetLeft(CircleShadow, InitPxls - 15);
+            }
+            else
+            {
+                Canvas.SetLeft(CircleKnob, FinitePxls);
+                Canvas.SetLeft(CircleShadow, FinitePxls - 15);
+            }
         }
     }
 }
